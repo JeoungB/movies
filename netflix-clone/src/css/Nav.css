@@ -1,0 +1,15 @@
+.nav {
+    width: 175px;
+    height: 100vh;
+    position: absolute;
+    background-color: black;
+}
+
+.logo {
+    width: 150px;
+    height: 100px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-size: cover;
+}

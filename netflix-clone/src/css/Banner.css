@@ -1,0 +1,7 @@
+.banner {
+    width: calc(100% - 175px);
+    height: 300px;
+    position: relative;
+    left: 175px;
+    background-color: red;
+}
