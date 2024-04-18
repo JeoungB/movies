@@ -20,14 +20,18 @@ const Contents = ({ title, id, movieURL, isLarge }) => {
       style={{
         width: "100%",
         paddingTop: "50px",
-        position: "absolute",
         overflow : "hidden",
-        backgroundColor: "red",
+        backgroundColor: "black",
       }}
     >
-      <h1>{title}</h1>
+      <h1 style={{
+        fontSize : "2.5vw",
+        fontWeight : "900",
+        color : "white",
+        margin : "0px 0px 20px 20px"
+      }}>{title}</h1>
       <div className="slider">
-        <div className="slider-arrow-left">
+        <div className={`slider-arrow-left ${isLarge && "large-arrow"}`}>
           <span>{"<"}</span>
         </div>
 
@@ -43,7 +47,7 @@ const Contents = ({ title, id, movieURL, isLarge }) => {
           </div>
         ))}
 
-        <div className="slider-arrow-right">
+        <div className={`slider-arrow-right ${isLarge && "large-arrow"}`}>
           <span>{">"}</span>
         </div>
       </div>

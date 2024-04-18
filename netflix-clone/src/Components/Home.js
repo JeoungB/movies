@@ -8,18 +8,23 @@ const Home = () => {
     <div
       className="home"
       style={{
-        width: "calc(100% - 275px)",
+        width: "calc(100% - 235px)",
         height: "300px",
         position: "relative",
-        left: "275px",
+        left: "235px",
       }}
     >
-      <Banner movieURL={requests.nowPlaying}/>
+      <Banner movieURL={requests.nowPlaying} />
       <Contents
         title="NETFLIX ORIGINALS"
         id="ORIGINALS"
         movieURL={requests.NetflixOriginals}
         isLarge
+      />
+      <Contents
+        title="Trending Now"
+        id="Trending"
+        movieURL={requests.Trending}
       />
     </div>
   );

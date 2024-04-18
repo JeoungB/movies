@@ -4,7 +4,7 @@ const Nav = () => {
 
     return(
         <div className="nav" style={{
-            width: "275px",
+            width: "235px",
             height: "100vh",
             position: "fixed",
             backgroundColor: "#000000",
