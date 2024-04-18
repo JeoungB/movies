@@ -58,6 +58,7 @@ const BannerContainer = styled.div`
   width: 100%;
   padding-bottom: 48.25%;
   font-size: 30px;
+  z-index : -1;
 `;
 
 const Iframe = styled.iframe`

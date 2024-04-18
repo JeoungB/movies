@@ -22,9 +22,29 @@ const Home = () => {
         isLarge
       />
       <Contents
-        title="Trending Now"
+        title="TRENDING"
         id="Trending"
         movieURL={requests.Trending}
+      />
+      <Contents
+        title="ACTION"
+        id="Action"
+        movieURL={requests.ActionMovies}
+      />
+      <Contents
+        title="COMEDY"
+        id="Comedy"
+        movieURL={requests.ComedyMovies}
+      />
+            <Contents
+        title="ROMANCE"
+        id="Romance"
+        movieURL={requests.RomanceMovies}
+      />
+            <Contents
+        title="HORROR"
+        id="Horror"
+        movieURL={requests.HorrorMovies}
       />
     </div>
   );

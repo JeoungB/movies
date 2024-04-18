@@ -1,5 +1,6 @@
 .slider {
     display: flex;
+    position: relative;
 }
 
 .slider-arrow-left {
@@ -10,7 +11,7 @@
     left: 0;
     font-size: 30px;
     cursor: pointer;
-    z-index: 2;
+    z-index: 4;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -39,22 +40,43 @@
     height: 25vw;
 }
 
-.movie-imgs .poster {
-    width: 21vw;
-    height: 18vw;
-    margin : 0px 2vw 0px 0px;
-    z-index: 1;
-    cursor: pointer;
-    border-radius: 10px;
-    background-size: cover;
+.movie-imgs {
+    display: flex;
+    position: relative;
+    width: 100%;
+    transition: .3s;
+    transition: .3s;
+    scroll-behavior: smooth;
 }
 
-.movie-imgs .large-poster {
-    width: 17vw;
-    height: 25vw;
+.poster {
+    width: 19vw;
+    height: 18vw;
     margin : 0px 2vw 0px 0px;
-    z-index: 1;
     cursor: pointer;
-    border-radius: 10px;
+    background-size: cover;
+    transition: .2s all ease-in-out;
+}
+.large-poster {
+    width: 19vw;
+    height: 28vw;
+    margin : 0px 1vw 0px 0px;
+    cursor: pointer;
     background-size: cover;
 }
+.poster:hover {
+    transform: scale(1.07);
+}
+
+.swiper-button-prev {
+    color: white !important;
+  }
+  
+  .swiper-button-next {
+    color: white !important;
+  }
+
+  .swiper-button-next:after, .swiper-button-prev:after{
+    font-size: 1.3rem !important;
+    font-weight: 900 !important;
+  }
