@@ -1,14 +1,14 @@
 import './App.css';
 import './css/reset.css';
 import Nav from './Components/Nav';
-import Banner from './Components/Banner';
+import Home from './Components/Home';
 
 function App() {
   return (
     <div className="App">
       <div className="container">
         <Nav />
-        <Banner />
+        <Home />
       </div>
     </div>
   );

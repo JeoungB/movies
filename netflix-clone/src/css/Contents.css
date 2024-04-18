@@ -1,0 +1,37 @@
+.slider {
+    display: flex;
+}
+
+.slider-arrow-left {
+    width: 3vw;
+    height: 35vw;
+    background-color: rgba(131, 129, 129, 0.233);
+    position: absolute;
+    left: 0;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 2;
+    color: white;
+}
+
+.slider-arrow-right {
+    width: 3vw;
+    height: 35vw;
+    background-color: rgba(131, 129, 129, 0.233);
+    position: absolute;
+    right: 0;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 2;
+    color: white;
+}
+
+.movie-imgs .large-poster {
+    width: 20vw;
+    height: 35vw;
+    margin : 0px 2vw 0px 0px;
+    z-index: 1;
+    cursor: pointer;
+    border-radius: 10px;
+    background-size: cover;
+}
