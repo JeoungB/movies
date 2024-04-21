@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "../api/axios";
 import "../css/Contents.css";
-
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
-
-
+import Modal from "./Modal"
+import { Navigation, Scrollbar, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -17,6 +14,8 @@ import "swiper/css/scrollbar";
 const Contents = ({ title, id, movieURL, isLarge }) => {
 
   const [movies, setMovies] = useState([]);
+  const [modal, setModal] = useState(false);
+  const [detailData, setDetailData] = useState();
 
   useEffect(() => {
     movieData();
@@ -27,6 +26,17 @@ const Contents = ({ title, id, movieURL, isLarge }) => {
     setMovies(request.data.results);
   };
 
+  const handleModal = async (id) => {
+
+    console.log("detail", movies)
+
+    const detailMoive = movies.find((movie) => {
+      return movie.id === id;
+    })
+
+    console.log(detailMoive)
+  }
+
   return (
     <section
       className="contents"
@@ -34,6 +44,7 @@ const Contents = ({ title, id, movieURL, isLarge }) => {
         width: "100%",
         paddingTop: "50px",
         backgroundColor: "black",
+        borderLeft : "1px solid red"
       }}
     >
       <h1 style={{
@@ -67,6 +78,7 @@ const Contents = ({ title, id, movieURL, isLarge }) => {
             <SwiperSlide key={movie.id}>
           <img
             className={`poster ${isLarge && "large-poster"}`}
+            onClick={() => handleModal(movie.id)}
             src={`https://image.tmdb.org/t/p/original/${
               movie.poster_path
             }`}
@@ -76,7 +88,11 @@ const Contents = ({ title, id, movieURL, isLarge }) => {
         ))}
         </div>
         </Swiper>
-
+        {
+          modal ? (
+            <Modal />
+          ) : null
+        }
     </section>
   );
 };
