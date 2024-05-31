@@ -1,3 +1,4 @@
+import { Outlet } from 'react-router-dom';
 import logo from '../imgs/logo.png';
 
 const Nav = () => {
@@ -7,7 +8,10 @@ const Nav = () => {
             width: "235px",
             height: "100vh",
             position: "fixed",
-            backgroundColor: "#000000",
+            backgroundColor: "black",
+            borderRight : "1px solid red",
+            zIndex : "10",
+            left : '0'            
         }}>
             <img className="logo" style={{
                     width: "150px",

@@ -3,43 +3,6 @@
     position: relative;
 }
 
-.slider-arrow-left {
-    width: 3vw;
-    height: 18vw;
-    background-color: rgba(87, 87, 87, 0.233);
-    position: absolute;
-    left: 0;
-    font-size: 30px;
-    cursor: pointer;
-    z-index: 4;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    backdrop-filter: blur(5px);
-    color: white;
-}
-
-.slider-arrow-right {
-    width: 3vw;
-    height: 18vw;
-    background-color: rgba(87, 87, 87, 0.233);
-    position: absolute;
-    right: 0;
-    font-size: 30px;
-    cursor: pointer;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    backdrop-filter: blur(5px);
-    color: white;
-}
-
-.large-arrow {
-    width: 3vw;
-    height: 25vw;
-}
-
 .movie-imgs {
     display: flex;
     position: relative;
@@ -55,6 +18,7 @@
     margin : 0px 2vw 0px 0px;
     cursor: pointer;
     background-size: cover;
+    border-radius: 20px;
     transition: .2s all ease-in-out;
 }
 .large-poster {
@@ -64,6 +28,7 @@
     cursor: pointer;
     background-size: cover;
 }
+
 .poster:hover {
     transform: scale(1.07);
 }

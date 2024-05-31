@@ -2,6 +2,7 @@ import React from "react";
 import Banner from "./Banner";
 import Contents from "./Contents";
 import requests from "../api/requests";
+import Nav from "./Nav";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
         left: "235px",
       }}
     >
+      <Nav />
       <Banner movieURL={requests.nowPlaying} />
       <Contents
         title="NETFLIX ORIGINALS"
