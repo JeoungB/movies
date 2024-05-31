@@ -13,8 +13,9 @@ import { useNavigate } from "react-router-dom";
 const Contents = ({ title, id, movieURL, isLarge }) => {
 
   const [movies, setMovies] = useState([]);
-  let dispatch = useDispatch();
   let navigate = useNavigate();
+  let dispatch = useDispatch();
+
 
   useEffect(() => {
     movieData();
@@ -79,6 +80,7 @@ const Contents = ({ title, id, movieURL, isLarge }) => {
         ))}
         </div>
         </Swiper>
+
     </section>
   );
 };
